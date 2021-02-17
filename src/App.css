@@ -1,0 +1,295 @@
+h3 {
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+.App {
+  text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 40vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.header-modal {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .success-content {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .success-content {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+}
+
+.total {
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(auto-fit, 1fr));
+  /* position: absolute; */
+  bottom: 75px;
+  right: 20px;
+
+  -webkit-box-align: end !important;
+
+  -ms-flex-align: end !important;
+
+  align-items: end !important;
+  text-align: right;
+  margin-top: 1rem;
+  /* font-size: 16px; */
+}
+
+.coupon {
+  font-size: 14px;
+  color: #738eb4;
+}
+
+.content-vehicle {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.content-services {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1rem;
+  -ms-grid-columns: minmax(100px, 1fr) 1rem minmax(100px, 1fr) 1rem
+    minmax(100px, 1fr);
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  overflow: auto;
+}
+
+/* overview component */
+.overview,
+.overview-services {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1rem;
+  -ms-grid-columns: 1fr 1rem 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  font-size: 15px;
+}
+
+.overview,
+.overview-contact {
+  margin-left: 1rem !important;
+  margin-right: 1rem !important;
+}
+
+.overview-contact {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3rem 1fr 3rem 1fr 3rem 1fr 3rem 1fr 3rem 1fr 3rem 1fr
+    3rem 1fr;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 10px;
+  grid-auto-rows: 24px;
+  -ms-grid-rows: auto 10px auto;
+  grid-template-areas:
+    'a a b b c c d d'
+    'e e f f g i i i';
+  grid-column-gap: 3rem;
+}
+
+.item-1 {
+  -ms-grid-row: 1;
+  grid-row: 1;
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: a;
+}
+
+.item-name {
+  -ms-grid-row: 1;
+  grid-row: 1;
+  -ms-grid-column: 5;
+  grid-column: 5;
+  -ms-grid-column-span: 3;
+  grid-area: b;
+}
+
+.item-2 {
+  -ms-grid-row: 1;
+  grid-row: 1;
+  -ms-grid-column: 9;
+  grid-column: 9;
+  -ms-grid-column-span: 3;
+  grid-area: c;
+}
+
+.item-email {
+  -ms-grid-row: 1;
+  grid-row: 1;
+  -ms-grid-column: 13;
+  grid-column: 13;
+  -ms-grid-column-span: 3;
+  grid-area: d;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: end;
+  justify-items: end;
+}
+
+.item-3 {
+  -ms-grid-row: 3;
+  grid-row: 3;
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: e;
+}
+
+.item-phone {
+  -ms-grid-row: 3;
+  grid-row: 3;
+  -ms-grid-column: 5;
+  grid-column: 5;
+  -ms-grid-column-span: 3;
+  grid-area: f;
+}
+
+.item-4 {
+  -ms-grid-row: 3;
+  grid-row: 3;
+  -ms-grid-column: 9;
+  grid-column: 9;
+  grid-area: g;
+}
+
+.item-comment {
+  -ms-grid-row: 3;
+  grid-row: 3;
+  -ms-grid-column: 11;
+  grid-column: 11;
+  -ms-grid-column-span: 5;
+  grid-area: i;
+  text-align: stretch !important;
+}
+
+.amount {
+  text-align: right;
+  margin-top: 1rem;
+  font-size: 16px;
+}
+
+/* header button */
+.button-custom {
+  position: absolute;
+  top: 5px;
+  right: 2px;
+  font-size: 2rem;
+  border: none !important;
+  background-color: inherit;
+  outline: none;
+  cursor: pointer;
+}
+
+.button-custom:hover {
+  color: #db2829;
+}
+
+.custom-segment {
+  width: 100% !important;
+}
+
+.close-icon {
+  text-align: center;
+}
+
+.checkbox {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.render-checkbox {
+  margin-top: 50px;
+  /* margin-bottom: 150px; */
+}
+
+.service-checkbox {
+  margin-bottom: 15px;
+}
+
+.icon-style {
+  font-size: 2rem;
+  color: #22b946;
+}
+
+.item:nth-child(2n + 2) {
+  text-align: end;
+}
+
+.image {
+  width: 5% !important;
+  margin-left: 1rem;
+}
+
+/* quick "fix" for tokic logo resizing */
+@media (max-width: 1799.98px) {
+  .image {
+    width: 7% !important;
+  }
+}
+
+@media (max-width: 1599.98px) {
+  .image {
+    width: 9% !important;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .image {
+    width: 12% !important;
+  }
+}
+
+@media (max-width: 639.98px) {
+  .image {
+    width: 22% !important;
+  }
+}
+
+/* temporary quick "fix" for modal dimmer in mobile view */
+@media (max-width: 450px) {
+  .ui.dimmer {
+    height: 140vh;
+  }
+  .image {
+    width: 27% !important;
+  }
+}
+
+@media (width: 320px) and (height: 568px) {
+  .ui.dimmer {
+    height: 160vh;
+  }
+}
+
+@media (max-width: 320px) {
+  .ui.dimmer {
+    height: 160vh;
+    width: 128vw;
+  }
+}
