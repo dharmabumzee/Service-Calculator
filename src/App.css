@@ -1,3 +1,25 @@
+/* body {
+  background-color: #f1fffa;
+} */
+
+.segment {
+  /* background-color: #f3decf !important; */
+  color: #083d77;
+  /* color: #da4167 !important; */
+  /* color: #c33c54 !important; */
+  /* color: "#0E7172" */
+  border-radius: 0px !important;
+}
+
+.button {
+  margin-right: 0px !important;
+}
+
+.header-modal {
+  color: #083d77 !important;
+  background-color: #f1fffa !important;
+}
+
 h3 {
   font-family: 'Open Sans', sans-serif !important;
 }
@@ -18,6 +40,8 @@ h3 {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  /* height: calc(100vh - 91.44px); */
+  height: calc(100vh - 195.26px);
 }
 
 .header-modal {

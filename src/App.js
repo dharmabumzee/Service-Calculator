@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Header from "./components/Header";
 import Modal from "./components/Modal";
 import ModalHeader from "./components/ModalHeader";
+import { Button } from "./components/Button";
 
 import ChooseVehicle from "./components/ChooseVehicle";
 import ChooseService from "./components/ChooseService";
@@ -207,10 +208,12 @@ const App = () => {
     <>
       <Header />
       <div className="App ui center aligned">
-        <p>Pritisnite gumb niže kako biste pokrenuli</p>
-        <button className="ui button" onClick={handleClick}>
-          Pokreni konfigurator
-        </button>
+        {/* <p>Press the button below to start</p> */}
+        <Button
+          handleClick={handleClick}
+          title={"Open Service Configurator"}
+          className={"huge ui primary button"}
+        />
         {openModal ? launchModal() : null}
       </div>
     </>
