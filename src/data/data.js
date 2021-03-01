@@ -1,10 +1,10 @@
 export const services = [
-  { id: 1, name: "Zamjena ulja i filtera", price: "500.00" },
-  { id: 2, name: "Promjena pakni", price: "450.00" },
-  { id: 3, name: "Promjena guma", price: "100.00" },
-  { id: 4, name: "Servis klima uređaja", price: "299.00" },
-  { id: 5, name: "Balansiranje guma", price: "50.00" },
-  { id: 6, name: "Zamjena ulja u kočnicama", price: "229.00" },
+  { id: 1, name: "Oil Change", price: "14.00" },
+  { id: 2, name: "Trans Assembly Inspection", price: "100.00" },
+  { id: 3, name: "Tires R&R", price: "100.00" },
+  { id: 4, name: "Cooling System Repair", price: "299.00" },
+  { id: 5, name: "Battery R&R", price: "50.00" },
+  { id: 6, name: "Brakes R&R", price: "229.00" },
 ];
 
 export const vehicles = [
@@ -19,6 +19,11 @@ export const vehicles = [
   { id: 9, value: "Hyundai" },
   { id: 10, value: "Honda" },
   { id: 11, value: "Toyota" },
+  { id: 12, value: "Suzuki" },
+  { id: 13, value: "Renault" },
+  { id: 14, value: "Opel" },
+  { id: 15, value: "Nissan" },
+  { id: 16, value: "Volvo" },
 ];
 
 export const fields = [

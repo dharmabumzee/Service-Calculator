@@ -100,16 +100,16 @@ const App = () => {
             className="ui button"
             onClick={() => setPageNumber(pageNumber - 1)}
           >
-            Nazad
+            Back
           </button>
         ) : null}
 
         <button
-          className="ui button"
+          className="ui button pagenumber-button"
           onClick={() => setPageNumber(pageNumber + 1)}
           disabled={isButtonEnabled()}
         >
-          {pageNumber === 3 ? "Pošalji" : "Dalje"}
+          {pageNumber === 3 ? "Send" : "Next"}
         </button>
       </>
     );

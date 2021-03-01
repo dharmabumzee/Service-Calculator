@@ -16,7 +16,9 @@ export const Services = ({
             onChange={handleChange}
             price={Number(service.price)}
           />
-          {service.name} ({Math.trunc(service.price)} kn)
+          <span style={{ marginLeft: "5px", cursor: "pointer" }}>
+            {service.name} - €{Math.trunc(service.price)}
+          </span>
         </label>
       </div>
     ));

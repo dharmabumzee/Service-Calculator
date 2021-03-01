@@ -15,9 +15,9 @@ const ModalHeader = ({ resetAllState, pageNumber }) => {
   return (
     <>
       {showButton}
-      <div className="ui basic segment custom-segment">
+      <div className="ui basic segment custom-segment modal-header">
         <div>
-          <h2>Konfigurator Servisa</h2>
+          <h2>Service Configurator</h2>
         </div>
       </div>
     </>

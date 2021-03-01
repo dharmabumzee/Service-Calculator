@@ -18,6 +18,7 @@ const ChooseService = ({
   setCouponVerified,
 }) => {
   const [couponClicked, setCouponClicked] = useState(false);
+  const discountCode = "SERVICE2021";
 
   const Checkbox = ({
     type = "checkbox",
@@ -61,7 +62,7 @@ const ChooseService = ({
 
   const verifyCoupon = () => {
     setCouponVerified(true);
-    if (coupon === "Tokić123") {
+    if (coupon === discountCode) {
       setValidCouponEntered(true);
       setDiscount(discountRate);
     }
@@ -70,7 +71,7 @@ const ChooseService = ({
   const couponErrorMessage = () => {
     return (
       <p style={{ color: "#B03060", marginTop: "10px" }}>
-        Niste unijeli važeći kod
+        Invalid discount code
       </p>
     );
   };
@@ -85,11 +86,11 @@ const ChooseService = ({
         <div className="ui mini action input">
           <input
             type="text"
-            placeholder="Unesite kod..."
+            placeholder="Enter discount code"
             onChange={handleOnChange}
           />
           <button className="ui button" onClick={verifyCoupon}>
-            Primjeni
+            Apply
           </button>
         </div>
         {couponVerified && !validCouponEntered ? couponErrorMessage() : null}
@@ -101,18 +102,16 @@ const ChooseService = ({
     return (
       <div style={{ marginTop: "0px", lineHeight: "2rem" }}>
         <p style={{ color: "#50b04d" }}>
-          Hvala vam, unijeli ste ispravan kod kupona
+          Your discount code was redeemed successfully!
         </p>
 
-        <div style={{ color: "#000000", fontSize: "16px" }}>
-          OSNOVICA:{" "}
-          <span style={{ marginLeft: "10px" }}>{subtotal.toFixed(2)} kn</span>
+        <div style={{ color: "#8a91b4", fontSize: "16px" }}>
+          SUBTOTAL:{" "}
+          <span style={{ marginLeft: "10px" }}>€{subtotal.toFixed(2)}</span>
           <br />
           <span style={{ fontSize: "18px", marginLeft: "45px" }}>
-            Popust (30%):{" "}
-            <span style={{ marginLeft: "10px" }}>
-              -{calculateDiscount()} kn
-            </span>
+            Discount (30%):{" "}
+            <span style={{ marginLeft: "10px" }}>- €{calculateDiscount()}</span>
           </span>
         </div>
       </div>
@@ -121,7 +120,7 @@ const ChooseService = ({
 
   return (
     <>
-      <h3>Korak 2. Odaberite jednu ili više usluga za koje ste</h3>
+      <h3>Step 2 - Choose a service (Multi-select)</h3>
       {useEffect(() => {
         Object.keys(checkedItems).length === 0
           ? setIsButtonDisabled(false)
@@ -149,7 +148,7 @@ const ChooseService = ({
                 marginRight: "125px",
               }}
             >
-              Imam kupon
+              Discount code
             </span>
           )}
         </span>
@@ -157,11 +156,10 @@ const ChooseService = ({
         <br />
 
         <span style={{ fontSize: "24px", fontWeight: "bold" }}>
-          UKUPNO:{" "}
+          TOTAL: €
           {validCouponEntered
             ? (subtotal - calculateDiscount()).toFixed(2)
             : subtotal.toFixed(2)}{" "}
-          KN
         </span>
       </div>
     </>
