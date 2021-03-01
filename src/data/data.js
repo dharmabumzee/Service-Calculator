@@ -1,10 +1,10 @@
 export const services = [
   { id: 1, name: "Oil Change", price: "14.00" },
   { id: 2, name: "Trans Assembly Inspection", price: "100.00" },
-  { id: 3, name: "Tires R&R", price: "100.00" },
+  { id: 3, name: "Full Engine Rebuild", price: "1100.00" },
   { id: 4, name: "Cooling System Repair", price: "299.00" },
   { id: 5, name: "Battery R&R", price: "50.00" },
-  { id: 6, name: "Brakes R&R", price: "229.00" },
+  { id: 6, name: "Brake Pads R&R", price: "229.00" },
 ];
 
 export const vehicles = [
@@ -29,8 +29,8 @@ export const vehicles = [
 export const fields = [
   {
     id: 1,
-    title: "Ime i prezime",
-    placeholder: "Ime i prezime",
+    title: "Full name",
+    placeholder: "Full name",
     tag: "input",
     required: "required",
     type: "name",
@@ -38,22 +38,22 @@ export const fields = [
   {
     id: 2,
     title: "E-mail",
-    placeholder: "Email adresa",
+    placeholder: "Email address",
     tag: "input",
     required: "required",
     type: "email",
   },
   {
     id: 3,
-    title: "Telefon",
-    placeholder: "Broj telefona",
+    title: "Phone",
+    placeholder: "Phone number",
     tag: "input",
     required: "required",
     type: "phone",
   },
   {
     id: 4,
-    title: "Napomena (opcionalno)",
+    title: "Comment (optional)",
     placeholder: "",
     tag: "textarea",
     type: "comment",
@@ -70,14 +70,14 @@ export const successData = {
 export const overviewData = [
   {
     id: 0,
-    title: "MODEL VOZILA",
+    title: "CAR MANUFACTURER",
   },
   {
     id: 1,
-    title: "ODABRANE USLUGE",
+    title: "SERVICES",
   },
   {
     id: 2,
-    title: "KONTAKT PODACI",
+    title: "CONTACT",
   },
 ];
