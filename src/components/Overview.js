@@ -1,5 +1,4 @@
 import React from "react";
-import { OverviewText } from "./OverviewText";
 import { overviewData } from "../data/data";
 import OverviewContact from "./OverviewContact";
 import { StepTitle } from "./StepTitle";
@@ -115,7 +114,6 @@ const Overview = ({
     <>
       <StepTitle subtitle="Step 4 - Overview" />
       <div className="overview-container">
-        {/* <OverviewText /> */}
         <div className="overview">
           {overviewData.map(({ id, title }) => {
             return <OverviewBox id={id} title={title} key={id} />;
