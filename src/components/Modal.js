@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 
 const Modal = ({ title, content, actions, pageNumber }) => {
   return ReactDOM.createPortal(
-    // <div className="visible ui dimmer modals active scrolling content modal-custom">
     <div className="visible ui dimmer modals active scrolling content modal-custom">
       <div
         onClick={(e) => e.stopPropagation()}
