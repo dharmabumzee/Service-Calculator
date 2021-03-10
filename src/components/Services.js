@@ -6,6 +6,11 @@ export const Services = ({
   handleChange,
   checkedItems,
 }) => {
+  const styles = {
+    marginLeft: "5px",
+    cursor: "pointer",
+  };
+
   const renderServices = () => {
     return services.map((service) => (
       <div key={service.id} className="service-checkbox">
@@ -16,7 +21,7 @@ export const Services = ({
             onChange={handleChange}
             price={Number(service.price)}
           />
-          <span style={{ marginLeft: "5px", cursor: "pointer" }}>
+          <span style={styles}>
             {service.name} - €{Math.trunc(service.price)}
           </span>
         </label>
