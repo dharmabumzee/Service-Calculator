@@ -4,7 +4,6 @@ import ReactJson from "react-json-view";
 import { successData } from "../data/data";
 
 const Success = ({ resetAllState, data }) => {
-  console.log(data);
   const { successSubtitle, successMessage, successButton } = successData;
 
   return (
