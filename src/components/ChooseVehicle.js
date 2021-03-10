@@ -1,7 +1,13 @@
 import React from "react";
 import { vehicles } from "../data/data";
+import { StepTitle } from "./StepTitle";
 
 import "./Buttons.scss";
+
+const vehicleStyle = {
+  marginLeft: "5px",
+  cursor: "pointer",
+};
 
 const ChooseVehicle = ({
   setVehicle,
@@ -27,7 +33,9 @@ const ChooseVehicle = ({
             checked={vehicleChecked == id}
             onChange={handleOnChange}
           />
-          <span style={{ marginLeft: "5px", cursor: "pointer" }}>{value}</span>
+          <span style={vehicleStyle} className="choose-vehicle">
+            {value}
+          </span>
         </label>
       </div>
     ));
@@ -35,7 +43,7 @@ const ChooseVehicle = ({
 
   return (
     <div>
-      <h3>Step 1 - Choose a car manufacturer (Single-select)</h3>
+      <StepTitle subtitle="Step 1 - Choose a car brand (Single-select)" />
       <div className="content-vehicle">{renderVehicles()}</div>
     </div>
   );

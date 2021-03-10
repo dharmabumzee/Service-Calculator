@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import ContactField from "./ContactField";
 import _ from "lodash";
 import { fields } from "../data/data";
+import { StepTitle } from "./StepTitle";
 
 const Contact = ({
   name,
@@ -52,7 +53,10 @@ const Contact = ({
 
   return (
     <div className="contact">
-      <h3>Korak 3. Vaši kontakt podaci</h3>
+      <StepTitle
+        subtitle="Step 3 - Contact Form"
+        className="removeMarginBottom"
+      />
       <div className="ui form">
         {fields.map(({ id, title, placeholder, tag, required, type }) => {
           return (

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Services } from "./Services";
+import { StepTitle } from "./StepTitle";
 
 const ChooseService = ({
   checkedItems,
@@ -70,10 +71,20 @@ const ChooseService = ({
 
   const couponErrorMessage = () => {
     return (
-      <p style={{ color: "#B03060", marginTop: "10px" }}>
+      <p
+        className="animate__animated animate__fadeIn"
+        style={{
+          color: "#B03060",
+          marginTop: "10px",
+        }}
+      >
         Invalid discount code
       </p>
     );
+  };
+
+  const handleOnFocus = () => {
+    setCouponVerified(false);
   };
 
   const calculateDiscount = () => {
@@ -88,6 +99,7 @@ const ChooseService = ({
             type="text"
             placeholder="Enter discount code"
             onChange={handleOnChange}
+            onFocus={handleOnFocus}
           />
           <button className="ui button" onClick={verifyCoupon}>
             Apply
@@ -101,7 +113,10 @@ const ChooseService = ({
   const handleCouponVerified = () => {
     return (
       <div style={{ marginTop: "0px", lineHeight: "2rem" }}>
-        <p style={{ color: "#50b04d" }}>
+        <p
+          style={{ color: "#50b04d" }}
+          className="animate__animated animate__fadeInDown"
+        >
           Your discount code was redeemed successfully!
         </p>
 
@@ -120,7 +135,7 @@ const ChooseService = ({
 
   return (
     <>
-      <h3>Step 2 - Choose a service (Multi-select)</h3>
+      <StepTitle subtitle="Step 2 - Choose a service (Multi-select)" />
       {useEffect(() => {
         Object.keys(checkedItems).length === 0
           ? setIsButtonDisabled(false)

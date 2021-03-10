@@ -18,7 +18,7 @@ const iconStyles = {
 
 const Header = () => {
   return (
-    <div className="ui left aligned segment header-segment">
+    <div className="ui left aligned segment header-segment" id="header">
       <div className="ui header" style={{ display: "flex" }}>
         <GiAutoRepair style={iconStyles} />
         <div style={headerStyles}>

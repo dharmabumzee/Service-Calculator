@@ -208,11 +208,11 @@ const App = () => {
     <>
       <Header />
       <div className="App ui center aligned">
-        {/* <p>Press the button below to start</p> */}
         <Button
           handleClick={handleClick}
           title={"Open Service Configurator"}
-          className={"huge ui primary button"}
+          className={"ui huge primary button modal-button"}
+          id="modal-button"
         />
         {openModal ? launchModal() : null}
       </div>

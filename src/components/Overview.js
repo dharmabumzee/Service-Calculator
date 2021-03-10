@@ -2,6 +2,7 @@ import React from "react";
 import { OverviewText } from "./OverviewText";
 import { overviewData } from "../data/data";
 import OverviewContact from "./OverviewContact";
+import { StepTitle } from "./StepTitle";
 
 const Overview = ({
   setPageNumber,
@@ -19,10 +20,11 @@ const Overview = ({
   const showButton = (id) => {
     return (
       <button
-        className="ui tiny button overview-button"
+        className="ui tiny yellow button overview-button"
         onClick={() => setPageNumber(id)}
       >
-        UREDI
+        <i className="edit icon" />
+        EDIT
       </button>
     );
   };
@@ -35,7 +37,7 @@ const Overview = ({
           {services.map((service, index) =>
             key === service.name ? (
               <div className="item" key={index}>
-                {service.price} KN
+                €{service.price}
               </div>
             ) : null
           )}
@@ -49,7 +51,7 @@ const Overview = ({
       <div className="amount">
         {validCouponEntered ? (
           <span style={{ fontSize: "15px" }}>
-            Popust (30%): {"  "}-{discountRate.toFixed(2)} KN
+            Discount (30%): €{"  "}-{discountRate.toFixed(2)}
             <br />
           </span>
         ) : null}
@@ -59,11 +61,10 @@ const Overview = ({
             textAlign: "stretch",
           }}
         >
-          UKUPNO:{" "}
+          TOTAL: €
           {validCouponEntered
             ? (subtotal - discountRate).toFixed(2)
             : subtotal.toFixed(2)}{" "}
-          KN
         </span>
       </div>
     );
@@ -89,32 +90,44 @@ const Overview = ({
   const OverviewBox = (overviewData) => {
     const { id, title } = overviewData;
     return (
-      <div className="ui vertical segment">
+      <div className="ui vertical segment overview-box-container">
         <h3>
-          <span style={{ marginRight: "10px" }}>{title}</span>
+          <span style={{ marginRight: "10px", verticalAlign: "text-bottom" }}>
+            {title}
+          </span>
           {"  "}
-          {showButton(id)}
+
+          <span
+            style={{
+              verticalAlign: "text-top",
+              marginLeft: "1rem",
+            }}
+          >
+            {showButton(id)}
+          </span>
         </h3>
-        {renderContent(id)}
+        <div style={{ marginTop: "1rem" }}>{renderContent(id)}</div>
       </div>
     );
   };
 
   return (
     <>
-      <h3>Korak 4. Pregled i potvrda vašeg odabira</h3>
-      <OverviewText />
-      <div className="overview">
-        {overviewData.map(({ id, title }) => {
-          return <OverviewBox id={id} title={title} key={id} />;
-        })}
+      <StepTitle subtitle="Step 4 - Overview" />
+      <div className="overview-container">
+        {/* <OverviewText /> */}
+        <div className="overview">
+          {overviewData.map(({ id, title }) => {
+            return <OverviewBox id={id} title={title} key={id} />;
+          })}
+        </div>
+        <OverviewContact
+          name={name}
+          email={email}
+          phone={phone}
+          comment={comment}
+        />
       </div>
-      <OverviewContact
-        name={name}
-        email={email}
-        phone={phone}
-        comment={comment}
-      />
     </>
   );
 };

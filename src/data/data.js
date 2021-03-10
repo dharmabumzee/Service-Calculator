@@ -38,15 +38,15 @@ export const fields = [
   {
     id: 2,
     title: "E-mail",
-    placeholder: "Email address",
+    placeholder: "your.name@email.com",
     tag: "input",
     required: "required",
     type: "email",
   },
   {
     id: 3,
-    title: "Phone",
-    placeholder: "Phone number",
+    title: "Contact Number",
+    placeholder: "(555)-999-999",
     tag: "input",
     required: "required",
     type: "phone",
@@ -61,16 +61,16 @@ export const fields = [
 ];
 
 export const successData = {
-  successSubtitle: "Vaša prijava je uspješno poslana!",
+  successSubtitle: "Order Confirmed!",
   successMessage:
-    "Vaša prijava je uspješno poslana i zaprimljena. Kontaktirati ćemo Vas u najkraćem mogućem roku. Hvala Vam!",
-  successButton: "Zatvori",
+    "Your order was successfully placed. You will receive an email confirmation soon. Thank You!",
+  successButton: "Close",
 };
 
 export const overviewData = [
   {
     id: 0,
-    title: "CAR MANUFACTURER",
+    title: "CAR BRAND",
   },
   {
     id: 1,
