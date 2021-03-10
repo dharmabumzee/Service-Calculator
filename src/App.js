@@ -36,7 +36,27 @@ const App = () => {
   const [coupon, setCoupon] = useState(0);
   const [couponVerified, setCouponVerified] = useState(false);
 
+  const [couponClicked, setCouponClicked] = useState(false);
+
   let discountRate = (subtotal * 30) / 100;
+  let total = subtotal - discountRate;
+
+  const finalDataForJSON = {
+    Car: vehicle,
+    Order: { ...checkedItems },
+    Contact: {
+      name,
+      email,
+      phone,
+      comment,
+    },
+    Price: {
+      Subtotal: subtotal,
+      couponVerified,
+      Discount: discountRate,
+      Total: total,
+    },
+  };
 
   const resetAllState = () => {
     resetModal();
@@ -56,6 +76,7 @@ const App = () => {
     setVehicle(null);
     setVehicleChecked(null);
     setCheckedItems([]);
+    setCouponClicked(false);
   };
 
   const resetCouponsAndSubtotal = () => {
@@ -139,6 +160,9 @@ const App = () => {
             setCoupon={setCoupon}
             couponVerified={couponVerified}
             setCouponVerified={setCouponVerified}
+            pageNumber={pageNumber}
+            couponClicked={couponClicked}
+            setCouponClicked={setCouponClicked}
           />
         );
       case 2:
@@ -172,7 +196,9 @@ const App = () => {
           />
         );
       case 4:
-        return <Success resetAllState={resetAllState} />;
+        return (
+          <Success resetAllState={resetAllState} data={finalDataForJSON} />
+        );
       default:
         return (
           <ChooseVehicle
@@ -203,6 +229,23 @@ const App = () => {
       />
     );
   };
+
+  console.log(Object.keys(checkedItems));
+  const checkedArr = Object.keys(checkedItems);
+  let arr = [];
+  services.map((x) => arr.push(x.name));
+  services.map((x) => console.log(x.price));
+  console.log(arr);
+  const filteredArray = checkedArr.filter((value) => arr.includes(value));
+  console.log("Filtered Arraya ", filteredArray);
+  // console.log(servicesArray);
+  const finalArray = services.filter((value) =>
+    filteredArray.includes(value.name)
+  );
+
+  console.log("Final Array ", finalArray);
+
+  console.log(finalArray.map((x) => [x.name, x.price]));
 
   return (
     <>

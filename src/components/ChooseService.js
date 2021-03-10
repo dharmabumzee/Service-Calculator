@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Services } from "./Services";
 import { StepTitle } from "./StepTitle";
+import { BsInfoCircle } from "react-icons/bs";
+import { Button, Popup, Message } from "semantic-ui-react";
 
 const ChooseService = ({
   checkedItems,
@@ -17,9 +19,14 @@ const ChooseService = ({
   setCoupon,
   couponVerified,
   setCouponVerified,
+  pageNumber,
+  couponClicked,
+  setCouponClicked,
 }) => {
-  const [couponClicked, setCouponClicked] = useState(false);
+  // const [couponClicked, setCouponClicked] = useState(false);
   const discountCode = "SERVICE2021";
+
+  const [copySuccess, setCopySuccess] = useState("");
 
   const Checkbox = ({
     type = "checkbox",
@@ -69,22 +76,68 @@ const ChooseService = ({
     }
   };
 
+  const CopiedToClipboardMessage = () => (
+    <Message
+      compact
+      positive
+      size="mini"
+      className="mini-message"
+      style={{ width: "23%", textAlign: "center", marginLeft: "10px" }}
+    >
+      <Message.Header>Copied to clipboard!</Message.Header>
+    </Message>
+  );
+
+  const CopyHint = () => (
+    <>
+      <Popup
+        content={discountCode}
+        value={discountCode}
+        trigger={
+          copySuccess ? null : (
+            <BsInfoCircle
+              className="hint-icon"
+              style={{
+                fontSize: "1.2rem",
+                marginRight: ".6rem",
+                cursor: "pointer !important",
+                color: "#143056",
+                verticalAlign: "top",
+              }}
+              onClick={() => {
+                setCopySuccess(navigator.clipboard.writeText(discountCode));
+              }}
+            />
+          )
+        }
+      />
+    </>
+  );
+
   const couponErrorMessage = () => {
     return (
-      <p
-        className="animate__animated animate__fadeIn"
-        style={{
-          color: "#B03060",
-          marginTop: "10px",
-        }}
-      >
-        Invalid discount code
-      </p>
+      <>
+        <div
+          className="animate__animated animate__fadeIn animated-info"
+          style={{
+            color: "#B03060",
+            marginTop: "10px",
+          }}
+        >
+          <CopyHint />
+          {copySuccess ? <CopiedToClipboardMessage /> : "Invalid discount code"}
+        </div>
+      </>
     );
   };
 
   const handleOnFocus = () => {
     setCouponVerified(false);
+    setCopySuccess("");
+  };
+
+  const showErrorMessage = () => {
+    return couponVerified && !validCouponEntered ? couponErrorMessage() : null;
   };
 
   const calculateDiscount = () => {
@@ -105,7 +158,7 @@ const ChooseService = ({
             Apply
           </button>
         </div>
-        {couponVerified && !validCouponEntered ? couponErrorMessage() : null}
+        {couponClicked && !couponVerified ? null : showErrorMessage()}
       </>
     );
   };

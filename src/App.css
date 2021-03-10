@@ -141,6 +141,16 @@ h2 {
   }
 }
 
+/* .clipboard {
+  margin-left: 800px !important;
+} */
+
+.animated-info {
+  /* width: 30% !important; */
+  /* margin-left: 100px !important; */
+  /* float: right; */
+}
+
 .total {
   display: -ms-grid;
   display: grid;
@@ -197,6 +207,10 @@ div.ui.dimmer {
 
 label {
   font-size: 1.1rem !important;
+}
+
+div {
+  border-left: none !important;
 }
 
 .content-services {
@@ -508,28 +522,32 @@ label {
   }
 }
 
-@media (max-height: 940px) {
+/* @media (max-height: 940px) {
   div.ui.dimmer {
     height: 150vh !important;
     margin-top: 0rem;
   }
-}
+} */
 
-@media (max-height: 1600px) {
+/* @media (max-height: 1600px) {
   div.ui.dimmer {
     height: 150vh !important;
   }
-}
-@media (max-height: 1300px) {
+} */
+/* @media (max-height: 1300px) {
   div.ui.dimmer {
     height: 150vh !important;
   }
-}
+} */
 
 @media (max-height: 900px) {
   div.ui.dimmer {
     height: 200vh !important;
   }
+}
+
+.hint-icon {
+  cursor: pointer !important;
 }
 
 @media (max-height: 646px) {
@@ -538,17 +556,17 @@ label {
   }
 }
 
-@media (max-height: 479px) {
+/* @media (max-height: 479px) {
   div.ui.dimmer {
     height: 315vh !important;
   }
-}
+} */
 
-@media (max-height: 321px) {
+/* @media (max-height: 321px) {
   div.ui.dimmer {
     height: 400vh !important;
   }
-}
+} */
 
 @media (max-width: 320px) {
   div.ui.dimmer {
