@@ -60,11 +60,11 @@ div.ui.segment:last-child {
   margin-top: 2.5rem;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .ui.modal > .content {
     margin-bottom: 2rem;
   }
-}
+} */
 
 .header-modal {
   color: #083d77 !important;
@@ -337,7 +337,6 @@ div {
 .overview-contact {
   margin-left: 1rem !important;
   margin-right: 1rem !important;
-  margin-bottom: 2rem !important;
 }
 
 .overview-contact {
@@ -353,6 +352,11 @@ div {
     'a a b b c c d d'
     'e e f f g i i i';
   grid-column-gap: 2rem;
+  /* margin-bottom: 2rem !important; */
+}
+
+div.ui.segment:last-child {
+  margin-bottom: 1rem !important;
 }
 
 .item-1 {
