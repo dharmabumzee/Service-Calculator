@@ -14,7 +14,10 @@ div.ui.segment:last-child {
   min-height: -moz-min-content !important;
   min-height: -webkit-min-content !important;
   min-height: min-content !important;
+  /* height: 100vh !important; */
   overflow: auto !important;
+  /* margin-top: 2rem !important;
+} */
 }
 
 .ui.dimmer {
@@ -23,7 +26,11 @@ div.ui.segment:last-child {
 }
 
 .modal-custom {
-  overflow: scroll !important;
+  overflow-y: auto;
+  /* margin-top: 2rem !important;
+  padding: 2rem !important;
+  width: 100vw !important;
+  height: 100vh !important; */
 }
 
 .modal-custom {
@@ -51,6 +58,12 @@ div.ui.segment:last-child {
 
 .ui.form {
   margin-top: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .ui.modal > .content {
+    margin-bottom: 2rem;
+  }
 }
 
 .header-modal {
@@ -197,6 +210,7 @@ div.ui.dimmer {
 
 .modal-header {
   padding: 0px !important;
+  /* margin-top: 2rem !important; */
 }
 
 .content-vehicle {
@@ -253,12 +267,7 @@ div {
     overflow: auto !important;
   }
   .overview-contact {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
     display: flex !important;
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-    -ms-flex-direction: column !important;
     flex-direction: column !important;
   }
   .ui.yellow.button {
@@ -291,12 +300,7 @@ div {
     overflow: auto !important;
   }
   .overview-contact {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
     display: flex !important;
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-    -ms-flex-direction: column !important;
     flex-direction: column !important;
     grid-column-gap: 0.4rem;
     margin-top: 0px !important;
@@ -333,6 +337,7 @@ div {
 .overview-contact {
   margin-left: 1rem !important;
   margin-right: 1rem !important;
+  margin-bottom: 2rem !important;
 }
 
 .overview-contact {
@@ -413,6 +418,7 @@ div {
   grid-row: 3;
   -ms-grid-column: 9;
   grid-column: 9;
+  -ms-grid-area: g;
   grid-area: g;
 }
 
