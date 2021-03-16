@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { Services } from "./Services";
 import { StepTitle } from "./StepTitle";
 import { BsInfoCircle } from "react-icons/bs";
-import { Button, Popup, Message } from "semantic-ui-react";
+import { Popup, Message } from "semantic-ui-react";
 
 const ChooseService = ({
   checkedItems,

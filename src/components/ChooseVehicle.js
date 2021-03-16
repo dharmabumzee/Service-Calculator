@@ -30,7 +30,7 @@ const ChooseVehicle = ({
             name="vehicle"
             value={value}
             id={id}
-            checked={vehicleChecked == id}
+            checked={Number(vehicleChecked) === id}
             onChange={handleOnChange}
           />
           <span style={vehicleStyle} className="choose-vehicle">
