@@ -147,6 +147,7 @@ const App = () => {
           <ChooseService
             checkedItems={checkedItems}
             setCheckedItems={setCheckedItems}
+            isButtonDisabled={isButtonDisabled}
             setIsButtonDisabled={setIsButtonDisabled}
             subtotal={subtotal}
             setSubtotal={setSubtotal}
