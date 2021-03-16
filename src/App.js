@@ -230,23 +230,6 @@ const App = () => {
     );
   };
 
-  console.log(Object.keys(checkedItems));
-  const checkedArr = Object.keys(checkedItems);
-  let arr = [];
-  services.map((x) => arr.push(x.name));
-  services.map((x) => console.log(x.price));
-  console.log(arr);
-  const filteredArray = checkedArr.filter((value) => arr.includes(value));
-  console.log("Filtered Arraya ", filteredArray);
-  // console.log(servicesArray);
-  const finalArray = services.filter((value) =>
-    filteredArray.includes(value.name)
-  );
-
-  console.log("Final Array ", finalArray);
-
-  console.log(finalArray.map((x) => [x.name, x.price]));
-
   return (
     <>
       <Header />
