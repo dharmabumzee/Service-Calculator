@@ -253,7 +253,12 @@ div {
     overflow: auto !important;
   }
   .overview-contact {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
     display: flex !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+    -ms-flex-direction: column !important;
     flex-direction: column !important;
   }
   .ui.yellow.button {
@@ -286,7 +291,12 @@ div {
     overflow: auto !important;
   }
   .overview-contact {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
     display: flex !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+    -ms-flex-direction: column !important;
     flex-direction: column !important;
     grid-column-gap: 0.4rem;
     margin-top: 0px !important;
