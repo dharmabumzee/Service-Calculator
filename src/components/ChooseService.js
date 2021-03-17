@@ -153,6 +153,7 @@ const ChooseService = ({
             placeholder="Enter discount code"
             onChange={handleOnChange}
             onFocus={handleOnFocus}
+            value={!coupon ? "" : coupon}
           />
           <button className="ui button" onClick={verifyCoupon}>
             Apply
@@ -185,6 +186,8 @@ const ChooseService = ({
       </div>
     );
   };
+
+  console.log("Coupon: ", coupon);
 
   return (
     <>
