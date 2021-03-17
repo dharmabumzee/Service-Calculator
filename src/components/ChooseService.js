@@ -187,8 +187,6 @@ const ChooseService = ({
     );
   };
 
-  console.log("Coupon: ", coupon);
-
   return (
     <>
       <StepTitle subtitle="Step 2 - Choose a service (Multi-select)" />
