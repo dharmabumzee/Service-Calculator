@@ -141,7 +141,7 @@
 }
 
 body {
-  // min-width: 280px !important;
+  overflow-y: auto;
   min-width: auto !important;
   min-height: 100vh;
   font-family: 'Inter', Arial, sans-serif;
