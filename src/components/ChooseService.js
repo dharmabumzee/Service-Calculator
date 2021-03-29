@@ -82,7 +82,7 @@ const ChooseService = ({
       positive
       size="mini"
       className="mini-message"
-      style={{ width: "23%", textAlign: "center", marginLeft: "10px" }}
+      style={{ textAlign: "center" }}
     >
       <Message.Header>Copied to clipboard!</Message.Header>
     </Message>

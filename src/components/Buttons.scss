@@ -141,6 +141,8 @@
 }
 
 body {
+  // min-width: 280px !important;
+  min-width: auto !important;
   min-height: 100vh;
   font-family: 'Inter', Arial, sans-serif;
   color: #8a91b4;

@@ -9,35 +9,30 @@ div.ui.segment:last-child {
   overflow: auto !important;
 }
 
+.dimmed.dimmable > .ui.modals.dimmer.visible {
+  display: flex !important;
+}
+
+.ui.modals.dimmer.visible {
+  display: flex !important;
+}
+
 .App-content {
   margin: auto;
   min-height: -moz-min-content !important;
   min-height: -webkit-min-content !important;
   min-height: min-content !important;
-  /* height: 100vh !important; */
-  overflow: auto !important;
-  /* margin-top: 2rem !important;
-} */
+  overflow-y: auto !important;
 }
 
 .ui.dimmer {
   bottom: 0 !important;
   right: 0 !important;
+  display: flex !important;
 }
 
 .modal-custom {
-  overflow-y: auto;
-  /* margin-top: 2rem !important;
-  padding: 2rem !important;
-  width: 100vw !important;
-  height: 100vh !important; */
-}
-
-.modal-custom {
-  /* margin: auto;
-  min-height: -moz-min-content;
-  min-height: -webkit-min-content;
-  min-height: min-content; */
+  display: flex !important;
 }
 
 .segment {
@@ -60,12 +55,6 @@ div.ui.segment:last-child {
   margin-top: 2.5rem;
 }
 
-/* @media (min-width: 768px) {
-  .ui.modal > .content {
-    margin-bottom: 2rem;
-  }
-} */
-
 .header-modal {
   color: #083d77 !important;
   background-color: #f1fffa !important;
@@ -81,6 +70,24 @@ div.ui.segment:last-child {
 @media (max-width: 767px) {
   .ui.modal > .header {
     padding-right: 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .App-content {
+    height: 100vh !important;
+  }
+  .ui.mini.message {
+    width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  .ui.dimmer {
+    width: 100vw !important;
+  }
+  label {
+    font-size: 0.95rem !important;
   }
 }
 
@@ -108,7 +115,6 @@ element.style {
 }
 
 h3 {
-  /* font-family: 'Open Sans', sans-serif !important; */
   font-family: 'Oswald', sans-serif;
   font-size: 1.7rem;
   font-weight: 500;
@@ -157,21 +163,10 @@ h2 {
   }
 }
 
-/* .clipboard {
-  margin-left: 800px !important;
-} */
-
-.animated-info {
-  /* width: 30% !important; */
-  /* margin-left: 100px !important; */
-  /* float: right; */
-}
-
 .total {
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(2, minmax(auto-fit, 1fr));
-  /* position: absolute; */
   bottom: 75px;
   right: 20px;
 
@@ -196,7 +191,6 @@ span {
 div.ui.dimmer {
   bottom: 0 !important;
   right: 0 !important;
-  /* position: static !important; */
   min-height: -moz-min-content !important;
   min-height: -webkit-min-content !important;
   min-height: min-content !important;
@@ -210,7 +204,6 @@ div.ui.dimmer {
 
 .modal-header {
   padding: 0px !important;
-  /* margin-top: 2rem !important; */
 }
 
 .content-vehicle {
@@ -246,8 +239,6 @@ div {
     flex-direction: column;
   }
   .overview-container {
-    /* display: flex !important;
-    flex-direction: column !important; */
     min-height: -moz-min-content !important;
     min-height: -webkit-min-content !important;
     min-height: min-content !important;
@@ -498,6 +489,12 @@ div.ui.segment:last-child {
   margin-left: 1rem;
 }
 
+.modal-custom {
+  height: 100vh !important;
+  width: 100vw !important;
+  overflow-y: auto;
+}
+
 /* quick "fix" for tokic logo resizing */
 @media (max-width: 1799.98px) {
   .image {
@@ -525,10 +522,6 @@ div.ui.segment:last-child {
 
 /* temporary quick "fix" for modal dimmer in mobile view */
 @media (max-width: 450px) {
-  div.ui.dimmer {
-    /* height: 200vh; */
-    width: 100vw;
-  }
   h2 {
     font-size: 1.4rem;
   }
@@ -543,56 +536,6 @@ div.ui.segment:last-child {
     width: 27% !important;
   }
 }
-
-/* @media (max-height: 940px) {
-  div.ui.dimmer {
-    height: 150vh !important;
-    margin-top: 0rem;
-  }
-} */
-
-/* @media (max-height: 1600px) {
-  div.ui.dimmer {
-    height: 150vh !important;
-  }
-} */
-/* @media (max-height: 1300px) {
-  div.ui.dimmer {
-    height: 150vh !important;
-  }
-} */
-
-@media (max-height: 900px) {
-  div.ui.dimmer {
-    height: 200vh !important;
-  }
-}
-
 .hint-icon {
   cursor: pointer !important;
-}
-
-@media (max-height: 646px) {
-  div.ui.dimmer {
-    height: 250vh !important;
-  }
-}
-
-/* @media (max-height: 479px) {
-  div.ui.dimmer {
-    height: 315vh !important;
-  }
-} */
-
-/* @media (max-height: 321px) {
-  div.ui.dimmer {
-    height: 400vh !important;
-  }
-} */
-
-@media (max-width: 320px) {
-  div.ui.dimmer {
-    height: 220vh !important;
-    width: 320px !important;
-  }
 }

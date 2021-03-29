@@ -119,7 +119,10 @@ const App = () => {
         {pageNumber > 0 ? (
           <button
             className="ui button"
-            onClick={() => setPageNumber(pageNumber - 1)}
+            onClick={() => {
+              setPageNumber(pageNumber - 1);
+              window.scrollTo(0, 0);
+            }}
           >
             Back
           </button>
@@ -127,7 +130,10 @@ const App = () => {
 
         <button
           className="ui button pagenumber-button"
-          onClick={() => setPageNumber(pageNumber + 1)}
+          onClick={() => {
+            setPageNumber(pageNumber + 1);
+            window.scrollTo(0, 0);
+          }}
           disabled={isButtonEnabled()}
         >
           {pageNumber === 3 ? "Send" : "Next"}
